@@ -1,68 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bir Gün Benim Gibi</title>
-  <meta name="description" content="Özel eğitim farkındalığı için interaktif topluma hizmet projesi." />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:Inter,sans-serif;
+      background:#090909;
+      color:#fff;
+      line-height:1.6;
+    }
+    html{scroll-behavior:smooth}
+    .container{width:min(1200px,92%);margin:auto}
+    nav{
+      position:sticky;top:0;z-index:99;
+      background:rgba(9,9,9,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-wrap{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:20px 0;
+    }
+    .logo{font-weight:800;font-size:24px}
+    .gold{color:#d8a45d}
+    .menu{display:flex;gap:28px}
+    .menu a{color:#fff;text-decoration:none;font-weight:500}
+    .btn{
+      background:transparent;
+      border:1px solid #d8a45d;
+      color:#d8a45d;
+      padding:14px 28px;
+      border-radius:14px;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .hero{
+      min-height:92vh;
+      display:flex;
+      align-items:center;
+      background:radial-gradient(circle at right,#3a220b 0,#090909 55%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:40px;
+      align-items:center;
+    }
+    h1{
+      font-size:88px;
+      line-height:.95;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+    .subtitle{font-size:30px;font-weight:700;margin-bottom:16px}
+    .desc{font-size:20px;color:#d0d0d0;max-width:650px}
+    .hero-buttons{display:flex;gap:16px;margin-top:34px}
+    .hero-card{
+      border:1px solid rgba(216,164,93,.25);
+      border-radius:28px;
+      min-height:500px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+      background:rgba(255,255,255,.02);
+      box-shadow:0 20px 80px rgba(0,0,0,.4);
+    }
+    .quote{
+      font-family:"Cormorant Garamond", serif;
+      font-size:52px;
+      text-align:center;
+      color:#f6e7d0;
+    }
+    section{padding:110px 0}
+    .section-title{
+      font-size:48px;
+      margin-bottom:18px;
+      text-align:center;
+    }
+    .section-sub{
+      text-align:center;
+      color:#bdbdbd;
+      max-width:760px;
+      margin:0 auto 50px;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+    .card{
+      background:#111;
+      border:1px solid rgba(216,164,93,.12);
+      border-radius:22px;
+      padding:28px;
+    }
+    .card h3{margin-bottom:10px;color:#d8a45d}
+    .profiles{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+    .profile{
+      background:#101010;
+      border:1px solid rgba(216,164,93,.18);
+      border-radius:28px;
+      padding:36px;
+      text-align:center;
+    }
+    .profile img{
+      width:220px;height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #d8a45d;
+      margin-bottom:20px;
+    }
+    .profile h3{font-size:38px;margin-bottom:8px}
+    .role{font-size:22px;color:#d8a45d}
+    footer{
+      padding:60px 0;
+      border-top:1px solid rgba(255,255,255,.06);
+      text-align:center;
+      color:#bdbdbd;
+    }
+    @media(max-width:900px){
+      h1{font-size:58px}
+      .hero-grid,.profiles{grid-template-columns:1fr}
+      .quote{font-size:38px}
+    }
+  </style>
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="nav">
-    <div class="brand"><span class="logo">✦</span><div><strong>Bir Gün</strong><strong>Benim Gibi</strong></div></div>
-    <nav>
-      <a href="#deneyimler">Deneyimler</a><a href="#farkindalik">Farkındalık</a><a href="#gorusler">Gerçek Görüşler</a><a href="#hakkimizda">Hakkımızda</a>
-    </nav>
-    <a class="navBtn" href="#deneyimler">Deneyimi Başlat</a>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="heroText">
-        <p class="eyebrow">Topluma Hizmet Uygulamaları</p>
-        <h1>Bir Gün<br><span>Benim Gibi</span></h1>
-        <h2>Anlamak, görmekten daha fazlasıdır.</h2>
-        <p>Özel gereksinimli bireylerin dünyasına bir günlüğüne adım atmaya hazır mısın?</p>
-        <div class="actions"><a class="primary" href="#deneyimler">▶ Deneyimi Başlat</a><a class="secondary" href="#hakkimizda">Projeyi Hazırlayanlar</a></div>
-        <small>🎧 Daha iyi bir deneyim için kulaklık kullanabilirsin.</small>
+<nav>
+  <div class="container nav-wrap">
+    <div class="logo">Bir Gün <span class="gold">Benim Gibi</span></div>
+    <div class="menu">
+      <a href="#deneyimler">Deneyimler</a>
+      <a href="#farkindalik">Farkındalık</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+    </div>
+    <a href="#deneyimler" class="btn">Deneyimi Başlat</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p style="letter-spacing:4px;color:#d8a45d;margin-bottom:14px;">TOPLUMA HİZMET UYGULAMALARI</p>
+      <h1>Bir Gün<br><span class="gold">Benim Gibi</span></h1>
+      <div class="subtitle">Anlamak, görmekten daha fazlasıdır.</div>
+      <p class="desc">Özel gereksinimli bireylerin dünyasına bir günlüğüne adım atmaya hazır mısın? Bu proje empati, farkındalık ve doğru yaklaşım için hazırlandı.</p>
+      <div class="hero-buttons">
+        <a href="#deneyimler" class="btn" style="background:#d8a45d;color:#111;font-weight:700;">Deneyimi Başlat</a>
+        <a href="#hakkimizda" class="btn">Projeyi Hazırlayanlar</a>
       </div>
-      <div class="portal"><div class="door"></div><p>Bazı bireyler dünyayı senin gördüğün gibi görmüyor.</p></div>
-    </section>
+    </div>
+    <div class="hero-card">
+      <div class="quote">“Bazı bireyler dünyayı senin gördüğün gibi görmüyor.”</div>
+    </div>
+  </div>
+</section>
 
-    <section id="deneyimler" class="section">
-      <div class="sectionHead"><p class="eyebrow">İnteraktif Bölüm</p><h2>Farkındalık Deneyimleri</h2><p>Kartlara tıklayarak kısa deneyimleri başlat.</p></div>
-      <div class="cards">
-        <button class="card" data-modal="dyslexia"><span>🧠</span><h3>Disleksi</h3><p>Harfler karıştığında okuma nasıl hissedilir?</p></button>
-        <button class="card" data-modal="autism"><span>∞</span><h3>Otizm Spektrum Bozukluğu</h3><p>Yoğun uyaranlar altında bir ortamı deneyimle.</p></button>
-        <button class="card" data-modal="dehb"><span>⚡</span><h3>DEHB</h3><p>Dikkat dağınıklığı ile görev yapmak nasıl?</p></button>
-        <button class="card" data-modal="hearing"><span>👂</span><h3>İşitme Yetersizliği</h3><p>Ses varken anlamın kaybolduğu an.</p></button>
-        <button class="card" data-modal="vision"><span>👁</span><h3>Görme Yetersizliği</h3><p>Her şeyi görmeden de anlayabilmek.</p></button>
-        <button class="card" data-modal="society"><span>♡</span><h3>Toplumsal Farkındalık</h3><p>Küçük yaklaşım değişiklikleri büyük fark yaratır.</p></button>
+<section id="deneyimler">
+  <div class="container">
+    <h2 class="section-title">Empati Deneyimleri</h2>
+    <p class="section-sub">Basit animasyon değil; hissettiren deneyimler. Disleksi, DEHB, otizm, işitme ve görme yetersizliği üzerine farkındalık alanları.</p>
+    <div class="cards">
+      <div class="card"><h3>Disleksi</h3><p>Harflerin yer değiştirdiği, odaklanmanın zorlaştığı okuma deneyimi.</p></div>
+      <div class="card"><h3>DEHB</h3><p>Dikkat dağıtıcı unsurlar arasında tek göreve odaklanma deneyimi.</p></div>
+      <div class="card"><h3>Otizm</h3><p>Aşırı uyaran ve çevresel hassasiyetin hissettirilmesi.</p></div>
+      <div class="card"><h3>İşitme</h3><p>Ses eksikliği ve altyazının önemini gösteren alan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="farkindalik">
+  <div class="container">
+    <h2 class="section-title">Doğru Yaklaşım</h2>
+    <p class="section-sub">Yanlış kalıplar yerine kapsayıcı ve saygılı iletişim.</p>
+    <div class="cards">
+      <div class="card"><h3>Yanlış</h3><p>“Normal değil mi?” gibi dışlayıcı ve yargılayıcı söylemler.</p></div>
+      <div class="card"><h3>Doğru</h3><p>“Her birey farklı öğrenir.” anlayışıyla destekleyici yaklaşım.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hakkimizda">
+  <div class="container">
+    <h2 class="section-title">Bu Proje Kim Tarafından Hazırlandı?</h2>
+    <div class="profiles">
+      <div class="profile">
+        <img src="berat.jpg" alt="Berat Şahin">
+        <h3>Berat Şahin</h3>
+        <div class="role">Öğretmen Adayı</div>
+        <p>Özel Eğitim Öğretmenliği<br>İstanbul 29 Mayıs Üniversitesi</p>
       </div>
-    </section>
+      <div class="profile">
+        <img src="buse.jpg" alt="Buse Gamze Eser">
+        <h3>Buse Gamze Eser</h3>
+        <div class="role">Öğretmen Adayı</div>
+        <p>Özel Eğitim Öğretmenliği<br>İstanbul 29 Mayıs Üniversitesi</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="farkindalik" class="section split">
-      <div><p class="eyebrow">Yanlış ve Doğru</p><h2>Toplumun dili değişirse, deneyim de değişir.</h2><p>Özel eğitim yalnızca sınıf içinde verilen bir destek değildir; bireyin anlaşılmasını, kabul edilmesini ve hayata katılımını güçlendiren bir yaklaşımdır.</p></div>
-      <div class="compare"><div class="wrong"><b>❌ Yanlış</b><p>“Sen de biraz daha dikkat etsen yaparsın.”</p></div><div class="right"><b>✅ Doğru</b><p>“Sana uygun yolu birlikte bulabiliriz.”</p></div><div class="wrong"><b>❌ Yanlış</b><p>“Farklı olduğu için uzak durmalıyız.”</p></div><div class="right"><b>✅ Doğru</b><p>“Farklılıklar öğrenme ortamını zenginleştirir.”</p></div></div>
-    </section>
+<footer>
+  Bu proje, özel eğitimde farkındalık oluşturmak amacıyla hazırlanmıştır.<br>
+  İstanbul 29 Mayıs Üniversitesi • Özel Eğitim Öğretmenliği
+</footer>
 
-    <section id="gorusler" class="section">
-      <div class="sectionHead"><p class="eyebrow">Sizin Emeğiniz</p><h2>Gerçek Görüşler ve Videolar</h2><p>Buraya kendi çektiğiniz videoları, röportajları veya fotoğrafları ekleyebiliriz.</p></div>
-      <div class="mediaGrid"><div class="mediaBox">🎥 Video Alanı 1<br><small>Örn: “Özel eğitim deyince aklınıza ne geliyor?”</small></div><div class="mediaBox">🎤 Röportaj Alanı<br><small>Kısa öğrenci/arkadaş görüşleri</small></div><div class="mediaBox">📸 Fotoğraf Galerisi<br><small>Hazırlık sürecinden kareler</small></div></div>
-    </section>
-
-    <section id="quiz" class="section quiz"><p class="eyebrow">Mini Test</p><h2>Kendini Test Et</h2><p id="question">Özel eğitim sadece engelli bireyler için midir?</p><div><button onclick="answer(false)">Evet</button><button onclick="answer(true)">Hayır</button></div><strong id="result"></strong></section>
-
-    <section id="hakkimizda" class="section">
-      <div class="sectionHead"><p class="eyebrow">Proje Ekibi</p><h2>Bu Proje Kim Tarafından Hazırlandı?</h2></div>
-      <div class="team"><div class="person"><div class="avatar">BŞ</div><h3>Berat Şahin</h3><p>Öğretmen adayı</p><span>Farkındalık oluşturmak ve daha kapsayıcı bir toplum inşa etmek için çalışıyorum.</span></div><div class="person"><div class="avatar">BGE</div><h3>Buse Gamze Eser</h3><p>Öğretmen adayı</p><span>Her bireyin eşit, anlaşılır ve değerli olduğu bir dünya için emek veriyorum.</span></div></div>
-    </section>
-  </main>
-
-  <footer><div><strong>Bir Gün Benim Gibi</strong><p>İstanbul 29 Mayıs Üniversitesi · Özel Eğitim Öğretmenliği</p></div><p>© 2026 Topluma Hizmet Projesi</p></footer>
-
-  <div class="modal" id="modal"><div class="modalContent"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
-  <script src="script.js"></script>
 </body>
 </html>
