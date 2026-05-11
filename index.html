@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bir Gün Benim Gibi</title>
+  <meta name="description" content="Özel eğitim farkındalığı için interaktif topluma hizmet projesi." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <div class="brand"><span class="logo">✦</span><div><strong>Bir Gün</strong><strong>Benim Gibi</strong></div></div>
+    <nav>
+      <a href="#deneyimler">Deneyimler</a><a href="#farkindalik">Farkındalık</a><a href="#gorusler">Gerçek Görüşler</a><a href="#hakkimizda">Hakkımızda</a>
+    </nav>
+    <a class="navBtn" href="#deneyimler">Deneyimi Başlat</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="heroText">
+        <p class="eyebrow">Topluma Hizmet Uygulamaları</p>
+        <h1>Bir Gün<br><span>Benim Gibi</span></h1>
+        <h2>Anlamak, görmekten daha fazlasıdır.</h2>
+        <p>Özel gereksinimli bireylerin dünyasına bir günlüğüne adım atmaya hazır mısın?</p>
+        <div class="actions"><a class="primary" href="#deneyimler">▶ Deneyimi Başlat</a><a class="secondary" href="#hakkimizda">Projeyi Hazırlayanlar</a></div>
+        <small>🎧 Daha iyi bir deneyim için kulaklık kullanabilirsin.</small>
+      </div>
+      <div class="portal"><div class="door"></div><p>Bazı bireyler dünyayı senin gördüğün gibi görmüyor.</p></div>
+    </section>
+
+    <section id="deneyimler" class="section">
+      <div class="sectionHead"><p class="eyebrow">İnteraktif Bölüm</p><h2>Farkındalık Deneyimleri</h2><p>Kartlara tıklayarak kısa deneyimleri başlat.</p></div>
+      <div class="cards">
+        <button class="card" data-modal="dyslexia"><span>🧠</span><h3>Disleksi</h3><p>Harfler karıştığında okuma nasıl hissedilir?</p></button>
+        <button class="card" data-modal="autism"><span>∞</span><h3>Otizm Spektrum Bozukluğu</h3><p>Yoğun uyaranlar altında bir ortamı deneyimle.</p></button>
+        <button class="card" data-modal="dehb"><span>⚡</span><h3>DEHB</h3><p>Dikkat dağınıklığı ile görev yapmak nasıl?</p></button>
+        <button class="card" data-modal="hearing"><span>👂</span><h3>İşitme Yetersizliği</h3><p>Ses varken anlamın kaybolduğu an.</p></button>
+        <button class="card" data-modal="vision"><span>👁</span><h3>Görme Yetersizliği</h3><p>Her şeyi görmeden de anlayabilmek.</p></button>
+        <button class="card" data-modal="society"><span>♡</span><h3>Toplumsal Farkındalık</h3><p>Küçük yaklaşım değişiklikleri büyük fark yaratır.</p></button>
+      </div>
+    </section>
+
+    <section id="farkindalik" class="section split">
+      <div><p class="eyebrow">Yanlış ve Doğru</p><h2>Toplumun dili değişirse, deneyim de değişir.</h2><p>Özel eğitim yalnızca sınıf içinde verilen bir destek değildir; bireyin anlaşılmasını, kabul edilmesini ve hayata katılımını güçlendiren bir yaklaşımdır.</p></div>
+      <div class="compare"><div class="wrong"><b>❌ Yanlış</b><p>“Sen de biraz daha dikkat etsen yaparsın.”</p></div><div class="right"><b>✅ Doğru</b><p>“Sana uygun yolu birlikte bulabiliriz.”</p></div><div class="wrong"><b>❌ Yanlış</b><p>“Farklı olduğu için uzak durmalıyız.”</p></div><div class="right"><b>✅ Doğru</b><p>“Farklılıklar öğrenme ortamını zenginleştirir.”</p></div></div>
+    </section>
+
+    <section id="gorusler" class="section">
+      <div class="sectionHead"><p class="eyebrow">Sizin Emeğiniz</p><h2>Gerçek Görüşler ve Videolar</h2><p>Buraya kendi çektiğiniz videoları, röportajları veya fotoğrafları ekleyebiliriz.</p></div>
+      <div class="mediaGrid"><div class="mediaBox">🎥 Video Alanı 1<br><small>Örn: “Özel eğitim deyince aklınıza ne geliyor?”</small></div><div class="mediaBox">🎤 Röportaj Alanı<br><small>Kısa öğrenci/arkadaş görüşleri</small></div><div class="mediaBox">📸 Fotoğraf Galerisi<br><small>Hazırlık sürecinden kareler</small></div></div>
+    </section>
+
+    <section id="quiz" class="section quiz"><p class="eyebrow">Mini Test</p><h2>Kendini Test Et</h2><p id="question">Özel eğitim sadece engelli bireyler için midir?</p><div><button onclick="answer(false)">Evet</button><button onclick="answer(true)">Hayır</button></div><strong id="result"></strong></section>
+
+    <section id="hakkimizda" class="section">
+      <div class="sectionHead"><p class="eyebrow">Proje Ekibi</p><h2>Bu Proje Kim Tarafından Hazırlandı?</h2></div>
+      <div class="team"><div class="person"><div class="avatar">BŞ</div><h3>Berat Şahin</h3><p>Öğretmen adayı</p><span>Farkındalık oluşturmak ve daha kapsayıcı bir toplum inşa etmek için çalışıyorum.</span></div><div class="person"><div class="avatar">BGE</div><h3>Buse Gamze Eser</h3><p>Öğretmen adayı</p><span>Her bireyin eşit, anlaşılır ve değerli olduğu bir dünya için emek veriyorum.</span></div></div>
+    </section>
+  </main>
+
+  <footer><div><strong>Bir Gün Benim Gibi</strong><p>İstanbul 29 Mayıs Üniversitesi · Özel Eğitim Öğretmenliği</p></div><p>© 2026 Topluma Hizmet Projesi</p></footer>
+
+  <div class="modal" id="modal"><div class="modalContent"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
